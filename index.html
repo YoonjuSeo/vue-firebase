@@ -9,6 +9,12 @@
             .two{
                 text-decoration: line-through;
             }
+            .canvas{
+                width: 300px;
+                height: 300px;
+                margin-top: 20px;
+                background: #ddd;
+            }
         </style>
     </head>
     <body>
@@ -26,7 +32,11 @@
             <button v-on:click="changeWage(-1)">Decrease wage by $1</button><br>
             <button v-on:dblclick="changeWage(5)">Increase wage by $5</button>
             <button v-on:dblclick="changeWage(-5)">Decrease wage by $5</button>
+            <br><br>
 
+            <button @click = "logEvent">Log Event Info</button>
+            <div class ="canvas" @mousemove ="logCoords">{{ coords.x }},{{ coords.y }}</div>
+            
         
         </div>
 
