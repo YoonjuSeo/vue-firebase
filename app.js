@@ -20,7 +20,7 @@ new Vue({
             this.wage += amount
         },
         logEvent(event){
-            console.log(event);
+            console.log(event)
         },
         logCoords(event){
             this.coords.x = event.offsetX
@@ -29,6 +29,9 @@ new Vue({
         updateName(event){
             //console.log(event.target.value)
             this.name = event.target.value
+        },
+        logMessage(){
+            console.log('Hello World')
         }
     }
 })
