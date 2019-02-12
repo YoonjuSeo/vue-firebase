@@ -9,7 +9,9 @@ new Vue({
         coords: {
             x: 0,
             y: 0
-        }
+        },
+        showName : true,
+        showAge : true
     },
     methods: {
         greet(time){
@@ -32,6 +34,17 @@ new Vue({
         },
         logMessage(){
             console.log('Hello World')
+        },
+        toggleName(){
+            this.showName = !this.showName
+        },
+        toggleAge(){
+            this.showAge = !this.showAge
         }
     }
 })
+
+if(condition){
+    //Do something
+
+}
