@@ -39,8 +39,12 @@
             <br><br>
 
             <p>My name is {{ name }}</p>
-            <input type="text" @keyup="updateName"/>
+            <!-- <input type="text" @keyup="updateName"/>
             <input type="text" @keypress="updateName"/>
+            <br><br> -->
+
+            <input type="text" v-model="name" />
+            <p>My name is {{ name }}</p>
         </div>
 
         <script src ="app.js"></script>
