@@ -1,6 +1,6 @@
 <template>
-  <div class="index container">
-    <div class="card" v-for="smoothies in smoothies" :key="smoothies.id">
+  <div class = "index container">
+    <div class="card" v-for="smoothie in smoothies" :key="smoothie.id">
       <div class="card-content">
         <h2 class="indigo-text">{{ smoothie.title }}</h2>
         <ul class="ingredients">
@@ -16,11 +16,11 @@
 <script>
 export default {
   name: 'Index',
-  data () {
-    return {
+  data(){
+    return{
       smoothies: [
-        { title: 'Ninja Brew', slug: 'ninja-brew', ingredients: ['bananas','coffee','milk'], id:1 },
-        { title: 'Morning Mood', slug: 'morning-mood', ingredients:['mango','lime','juice'], id:2 }
+        { title: 'Ninja Brew', slug: 'ninja-brew', ingredients:['bananas','coffee','milk'], id:1},
+        { title: 'Morning Mood', slug: 'morning-mood', ingredients:['mango','lime','juice'], id :2}
       ]
     }
   }
@@ -43,8 +43,7 @@ export default {
 .index .ingredients{
   margin: 30px auto;
 }
-.index.ingredients li{
-  display: 
+.index .ingredients li{
+  display: inline-block;
 }
-
 </style>
