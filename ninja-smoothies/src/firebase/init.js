@@ -1,17 +1,17 @@
 import firebase from 'firebase'
 import firestore from 'firebase/firestore'
-
+  
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyD7S87xiP6Ni3tmIupnCByziklwk1HxzWw",
-  authDomain: "ninja-smoothies.firebaseapp.com",
-  databaseURL: "https://ninja-smoothies.firebaseio.com",
-  projectId: "ninja-smoothies",
-  storageBucket: "",
-  messagingSenderId: "979366054783"
+apiKey: "AIzaSyCJ6woMdHRq3hH_OTHeA5MciOWFXNhZXKc",
+authDomain: "ninja-smoothies-681e3.firebaseapp.com",
+databaseURL: "https://ninja-smoothies-681e3.firebaseio.com",
+projectId: "ninja-smoothies-681e3",
+storageBucket: "ninja-smoothies-681e3.appspot.com",
+messagingSenderId: "288391384659"
 };
 const firebaseApp = firebase.initializeApp(config);
-firebaseApp.firestore().settings({ timestampsInSnapshots: true })
+firebaseApp.firestore().settings({timestampsInSnapshots: true})
 
-// export firestore database
+//export firestore database
 export default firebaseApp.firestore()

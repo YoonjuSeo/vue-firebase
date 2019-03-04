@@ -1,15 +1,19 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Index from '@/components/Index'
+<template>
+  <div id="app">
+    <Navbar />
+    <router-view/>
+  </div>
+</template>
 
-Vue.use(Router)
+<script>
+import Navbar from '@/components/Navbar'
+export default {
+  name: 'App',
+  components: {
+    Navbar
+  }
+}
+</script>
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Index',
-      component: Index
-    }
-  ]
-})
+<style>
+</style>
