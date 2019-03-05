@@ -1,48 +1,32 @@
 <template>
-  <div class="index container">
-    <div class="card" v-for="smoothie in smoothies" :key="smoothie.id">
-      <div class="card-content">
-        <h2 class="indigo-text">{{ smoothie.title }}</h2>
-        <ul class="ingredients">
-          <li v-for="(ing, index) in smoothie.ingredients" :key="index">
-            <span class="chip">{{ ing }}</span>
-          </li>
-        </ul>
+  <div class="navbar">
+    <nav class="nav-extended indigo darken-2">
+      <div class="nav-content">
+        <router-link :to="{ name: 'Index' }">
+          <span class="nav-title">Ninja Smoothies </span>
+        </router-link>
+        <a href="" class="btn-floating btn-large halfway-fab pink">
+          <router-link to="">
+            <i class="material-icons">add</i>
+          </router-link>
+        </a>
       </div>
-    </div>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Index',
+  name: 'Navbar',
   data(){
-    return{
-      smoothies: [
-        { title: 'Ninja Brew', slug: 'ninja-brew', ingredients: ['bananas', 'coffee', 'milk'], id: '1' },
-        { title: 'Morning Mood', slug: 'morning-mood', ingredients: ['mango', 'lime', 'juice'], id: '2' }
-      ]
+    return {
     }
   }
 }
 </script>
 
 <style>
-.index{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
-  margin-top: 60px;
-}
-.index h2{
-  font-size: 1.8em;
-  text-align: center;
-  margin-top: 0;
-}
-.index .ingredients{
-  margin: 30px auto;
-}
-.index .ingredients li{
-  display: inline-block;
+.navbar nav{
+  padding: 0 20px;
 }
 </style>
