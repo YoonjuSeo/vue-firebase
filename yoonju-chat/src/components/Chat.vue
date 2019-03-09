@@ -6,7 +6,7 @@
                 <ul class="messages">
                     <li v-for="message in messages" :key="message.id">
                         <span class="teal-text">{{message.name}}</span>
-                        <span class="grey-text-darken-3">{{message.content}}</span>
+                        <span class="grey-text text-darken-3">{{message.content}}</span>
                         <span class="grey-text time">{{message.timestamp}}</span>
                     </li>
                 </ul>
@@ -36,8 +36,10 @@ export default {
     created(){
         let ref = db.collection('messages').orderBy('timestamp')
 
+        //subscribe to changes to the 'messages' collection
         ref.onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
+                console.log(change)
                 if(change.type == 'added'){
                     let doc = change.doc
                     this.messages.push({
@@ -63,7 +65,7 @@ export default {
 }
 .chat .time{
     display: block;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 </style>
 
